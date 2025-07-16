@@ -34,7 +34,7 @@ An interactive PHP-based web portal for accessing and downloading previous year 
 ![BTech page](screenshots/btech.png)
 
 ### 🔹 Download Button
-![Download Button](screenshots/upload.png)
+![Download Button](screenshots/download.png)
 
 ### 🔹 About Us
 ![About Us](screenshots/about_us.png)
