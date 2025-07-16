@@ -1,0 +1,406 @@
+*{
+    background-color: #f5f3d9;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+/* For Frontend ... */
+/*  ********************************************************************************************************* */
+#header{
+    position: sticky;
+    top:0px;
+}
+
+#nav{
+    height : 40px;
+    background-color: #5BBCFF;
+    border: 3px solid #63d7e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+}
+
+/* #img{
+    height: 60px;
+    width:60px;
+} */
+
+.nav{
+    color:aqua;
+    background-color:#5BBCFF;
+}
+
+#heading{
+    text-align: center;
+    /* color: #7EA1FF; */
+    color:rgb(104, 104, 197);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#intro{
+    text-align:center;
+}
+
+#select{
+    align-self: center;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    transition: all 1s ease-in 0s;
+    animation: move 5s ease-in 0s infinite alternate;
+}
+
+@keyframes move{
+    from{
+        color: #bd8097;        
+        transform: translate(-100px);
+    }
+    to{
+        color: #6e8cdc;
+        transform: translate(100px);
+    }
+}
+
+/* #prog {
+    height: 300px;
+    width: 800px;
+    background-color: rgba(198, 195, 174, 0.4); 
+    background-image: url("image.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+@keyframes progAnim{
+    from{
+        background-color: aquamarine;
+    }
+    to{
+        background-image: url("image.png");
+        transform :scale(1.15);
+    }
+}
+
+.prog{
+    height: 200px;
+    width: 200px;
+    display: block;
+    border: 15px double rgb(216, 216, 16);
+    align-self: center;
+
+    transition: all 1s ease-in 0s;
+}
+
+.prog:hover{
+    border:15px double #b66969;
+    transform: scale(1.15);
+}
+
+img{
+    height: 200px;
+    width:200px;
+}
+
+#aboutNav, #contactNav{
+    background-color: #dddabe;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutNav1, #contactNav1{
+    display: inline-block;
+    background-color:  #dddabe;
+    font-size: 30px;
+    font-weight: bolder;
+    animation: move 5s ease-in 0s infinite alternate;
+}
+
+#about, #about1{
+    color: rgb(9, 174, 174);
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-style:italic;
+    padding: 40px 10px 20px 10px;
+}
+
+#info, #info1{
+    margin: auto;
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info, .info1{
+    text-align:justify;
+    width: fit-content;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#aboutUsHidden, #contactUsHidden{
+    display: none;
+    padding-top: 40px;
+}
+
+#aboutUs, #contactUs, #home, #signUp{
+    text-decoration: none;
+    color:rgb(2, 37, 37);
+    background-color:#5BBCFF;
+    font-size: 20px;
+    font-weight:bolder;
+    font-style: oblique;
+}
+
+#aboutUs:hover, #contactUs:hover, #home:hover, #signUp:hover{
+    color:aliceblue;
+    text-decoration: underline;
+    /* animation: navHover 1s ease-in 0s infinite alternate; */
+}
+
+@keyframes navHover{
+    from{
+        border: 5px solid #b1c3ca;
+    }
+    to{
+        border: 5px solid #4793AF;
+    }
+}
+
+.contactUsHidden{
+    padding-top: 50px;
+    /* display: none; */
+}
+
+#contactUsHidden{
+    display: none;
+}
+
+/* #footer{
+    height: 50px;
+    width:100vw;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+} */
+/* For BTech ... */
+/*  ********************************************************************************************************* */
+
+#btechHeading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes moveBranch{
+    from{
+                
+        transform: translate(-100px);
+    }
+    to{
+        
+        transform: translate(100px);
+    }
+}
+
+#selectBranch{
+    align-self: center;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    transition: all 1s ease-in 0s;
+    /* animation: moveBranch 5s ease-in 0s infinite alternate ; */
+
+    margin-bottom: 7px;
+}
+
+#dropdown{
+    height: fit-content;
+    width: fit-content;
+    border: 5px solid rgb(203, 115, 21);
+    background-color: rgb(218, 230, 226);
+    font-style: italic;
+    font-weight: bolder;
+    font-size:medium;
+
+}
+
+#dropdown:hover{
+    transition: all 1s ease-in 0s;
+    /* transform: scale(1.05); */
+    border: 5px solid rgb(124, 174, 15)
+}
+
+/* #btech{
+    height: 200px;
+    width: 200px;
+    background-image: url("btech.jpg");
+    background-size: cover;
+    margin: 50px;
+    align-self: center;
+}
+
+#mtech{
+    height: 200px;
+    width: 200px;
+    background-image: url("mtech1.jpg");
+    background-size: cover;
+    align-self: center;
+    margin: 50px;
+}
+
+#phd{
+    height: 200px;
+    width: 200px;
+    background-image: url("phd.jpg");
+    background-size: cover;
+    align-self: center;
+    margin: 50px;
+}
+
+#btechHeading{
+    color:#7469B6;
+    text-align: center;
+}
+
+#btech2023{
+    height: 1000px;
+    background-color: #736aa9;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.btech2023{
+    height: 1000px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+} */
+
+
+
+
+#btechBtn:hover{
+    transform: scale(1.15);
+    font-weight: bolder;
+    background-color: rgb(217, 215, 90);
+    
+}
+
+#btechBtn{
+    background-color: rgb(215, 223, 230);
+    font-weight:bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(28, 77, 223);
+    
+}
+
+.year{
+    color:rgb(16, 175, 13);
+}
+
+.oddd{
+    color:rgb(10, 132, 185);
+}
+
+.btech{
+    display: none;
+}
+
+
+
+
+/* For MTech ... */
+/*  ********************************************************************************************************* */
+
+#mtechHeading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes moveMtechBranch{
+    from{
+                
+        transform: translate(-100px);
+    }
+    to{
+        
+        transform: translate(100px);
+    }
+}
+
+#selectMtechBranch{
+    align-self: center;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    transition: all 1s ease-in 0s;
+    /* animation: moveMtechBranch 5s ease-in 0s infinite alternate ; */
+
+    margin-bottom: 7px;
+}
+
+#mtechDropdown{
+    height: fit-content;
+    width: fit-content;
+    border: 5px solid rgb(203, 115, 21);
+    background-color: rgb(218, 230, 226);
+    font-style: italic;
+    font-weight: bolder;
+    font-size:medium;
+
+}
+
+#mtechDropdown:hover{
+    transition: all 1s ease-in 0s;
+    /* transform: scale(1.05); */
+    border: 5px solid rgb(124, 174, 15)
+}
+
+#mtechBtn:hover{
+    transform: scale(1.15);
+    font-weight: bolder;
+    background-color: rgb(217, 215, 90);
+}
+
+#mtechBtn{
+    background-color: rgb(215, 223, 230);
+    font-weight:bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(28, 77, 223);
+}
+
+.mtechYear{
+    color:rgb(16, 175, 13);
+}
+
+.mtechOddd{
+    color:rgb(10, 132, 185);
+}
+
+.mtech{
+    display: none;
+}

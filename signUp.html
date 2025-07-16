@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Delhi PYP Sign-Up Form</title>
+    
+    <style>
+       /* Global styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('nitDelhi.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Form container */
+#container {
+    background: rgba(255, 255, 255, 0.2); /* Lighter background */
+    backdrop-filter: none; /* No blur */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form title and subtitle */
+h2 {
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold color for title */
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px; /* Larger size for main title */
+    letter-spacing: 1px;
+}
+
+h5 {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; /* Subtitle in white */
+    margin-bottom: 30px;
+}
+
+/* Section Headings (e.g., Date of Birth, Gender) */
+h3 {
+    color: #ADD8E6; /* Light Blue for section headings */
+    font-size: 22px; /* Slightly larger font for section headings */
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Input fields and text area */
+.form {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #FFD700;
+    outline: none;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #d3d3d3;
+}
+
+/* Dropdown (select) styling */
+select.form {
+    color: #fff; /* White text color to match other inputs */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+select.form option {
+    color: #333; /* Darker text color for options */
+    background-color: #ffffff; /* White background for options */
+}
+
+select.form:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly darker semi-transparent background when focused */
+    border-color: #FFD700; /* Border color on focus */
+    outline: none;
+}
+
+/* Radio button styling */
+label {
+    font-size: 16px;
+    color: #E0E0E0;
+    font-weight: 500;
+    margin: 5px 10px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Textarea */
+#des {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit button */
+#submit {
+    background: #FF4500;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+}
+
+#submit:hover {
+    background: #FF6347;
+    transform: scale(1.05);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px; /* Slightly smaller font size for section headings */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h2>Welcome To NIT DELHI PYP Sign-Up Form</h2>
+        <h5>Enter your details and submit this form for a better experience</h5>
+        
+        <form method="post" action="process.php" id="signupForm" autocomplete="off">
+            <input type="text" name="name" id="name" class="form" placeholder="Enter Your Name" required>
+            <input type="email" name="email" id="email" class="form" placeholder="Enter Your Email" required>
+            <span id="email-error" style="color: red; display: none;">Email is already registered!</span> <!-- Error message -->
+            <div style="position: relative;">
+                <input type="password" name="password" id="password" class="form" placeholder="Enter Your Password" required>
+                <span id="togglePassword" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
+            </div>
+            
+            <!-- Date of Birth -->
+            <h3>Date of Birth:</h3>
+            <input type="date" id="dob" name="dob" class="form" required>
+            
+            <!-- Gender -->
+            <h3>Select Your Gender</h3>
+            <label for="male">
+                <input type="radio" name="gender" value="Male" id="male" required> Male
+            </label>
+            <label for="female">
+                <input type="radio" name="gender" value="Female" id="female" required> Female
+            </label>
+
+            <input type="text" name="phone" id="phone" class="form" placeholder="Enter Phone Number" required>
+            <input type="text" name="college" id="college" class="form" placeholder="Enter Your College Name" required>
+
+            <!-- Course Dropdown -->
+            <h3>Select Your Course</h3>
+            <select name="course" id="course" class="form" required>
+                <option value="" disabled selected>Select your course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="PHD">PHD</option>
+            </select>
+
+            <!-- Branch Dropdown -->
+            <h3>Select Your Branch</h3>
+            <select name="branch" id="branch" class="form" required>
+                <option value="" disabled selected>Select your branch</option>
+                <option value="CSE">CSE</option>
+                <option value="AI & DS">AI & DS</option>
+                <option value="ECE">ECE</option>
+                <option value="EE">EE</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="ME">ME</option>
+            </select>
+
+            <!-- Year Dropdown -->
+            <h3>Select Your Year</h3>
+            <select name="year" id="year" class="form" required>
+                <option value="" disabled selected>Select your year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+
+            <!-- Feedback -->
+            <textarea name="des" id="des" class="form" placeholder="Give Your Valuable Feedback!" required></textarea>
+
+            <!-- Submit button -->
+            <input type="submit" name="submit" value="Submit" id="submit" class="form" disabled> <!-- Initially disabled -->
+
+        </form>
+    </div>
+
+    <script>
+        // Email validation via AJAX
+        document.getElementById('email').addEventListener('input', function() {
+            var email = this.value;
+            var submitButton = document.getElementById('submit');
+            var errorMessage = document.getElementById('email-error');
+
+            if (email) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'process.php', true);  // Make the request to process.php
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        var response = xhr.responseText.trim();
+                        
+                        // If email exists, show error and disable submit button
+                        if (response === 'exists') {
+                            errorMessage.style.display = 'block';
+                            submitButton.disabled = true;
+                        } else {
+                            errorMessage.style.display = 'none';
+                            submitButton.disabled = false; // Enable submit button if email is available
+                        }
+                    }
+                };
+                xhr.send('check_email=' + encodeURIComponent(email));
+            }
+        });
+
+        // Password show/hide toggle
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+    </script>
+</body>
+</html>
