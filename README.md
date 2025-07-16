@@ -46,19 +46,19 @@ An interactive PHP-based web portal for accessing and downloading previous year 
 ![Sign Up](screenshots/sign_up.png)
 
 
-## 🗃️ Database Overview
+## Database Overview
 
 ### 🔹 sign_up Table
 Stores user registration details  
-<img src="screenshots/consumer_table.png" width="600" alt="Consumer Table"/>
+<img src="screenshots/consumer_table.png"  alt="Consumer Table"/>
 
 ### 🔹 btech Table
 Stores metadata of B.Tech uploaded files  
-<img src="screenshots/btech_table.png" width="600" alt="BTech Table"/>
+<img src="screenshots/btech_table.png"  alt="BTech Table"/>
 
 ### 🔹 mtech Table
 Stores metadata of M.Tech uploaded files  
-<img src="screenshots/mtech_table.png" width="600" alt="MTech Table"/>
+<img src="screenshots/mtech_table.png"  alt="MTech Table"/>
 
 
 
